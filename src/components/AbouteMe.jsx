@@ -4,7 +4,7 @@ import CardAboutMe from "./CardAboutMe";
 
 const AbouteMe = () => {
   return (
-    <section id="about-me">
+    <div id="about-me">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -36,7 +36,7 @@ const AbouteMe = () => {
           title="Hobbies"
         />
       </motion.div>
-    </section>
+    </div>
   );
 };
 

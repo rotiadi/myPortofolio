@@ -4,13 +4,7 @@ const CardProject = ({ title, image, description, appLink, gitLink, tags }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        position: "relative",
-      }}
-    >
+    <div className="card-project-container">
       <h3 className="card-project-title" style={{ textAlign: "center" }}>
         <a href={appLink} target="_blank" rel="noreferrer">
           {title}
@@ -34,7 +28,12 @@ const CardProject = ({ title, image, description, appLink, gitLink, tags }) => {
                 <>
                   <p>GitHub: </p>
                   {gitLink.map((source) => (
-                    <a key={source} href={source} target="_blank">
+                    <a
+                      key={source}
+                      href={source}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       {source}
                     </a>
                   ))}

@@ -7,12 +7,12 @@ const Projects = () => {
     <>
       <h1>Projects</h1>
 
-      <section id="projects">
+      <div id="projects">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          style={{ display: "flex", flexDirection: "row" }}
+          className="projects-container"
         >
           <CardProject
             title="Tic Tac Toe"
@@ -51,7 +51,7 @@ const Projects = () => {
             tags={["Node.js", "Express", "MongoDB"]}
           />
         </motion.div>
-      </section>
+      </div>
     </>
   );
 };

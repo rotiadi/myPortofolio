@@ -4,7 +4,7 @@ import ContactItem from "./ContactItem";
 
 const ContactMe = () => {
   return (
-    <section id="contact-me">
+    <div id="contact-me">
       <h2>Contact informations</h2>
       <div className="contact-items">
         <ContactItem
@@ -31,7 +31,7 @@ const ContactMe = () => {
           icon="/icons/github.svg"
         />
       </div>
-    </section>
+    </div>
   );
 };
 
