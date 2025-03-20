@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+:root {
+  --bg-color-light: #1e1e1e;
+  --text-color-light: #eaeaea;
+  --accent-color: #e07f7c;
+  background-image: url("/public/v830-sasi-29.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  color: #000;
+  border: none;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  color: var(--text-color-light);
+  font-family: "Inter", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px; /* Adjust height */
+
+  backdrop-filter: blur(20px); /* Optional: Glass effect */
+  z-index: 1000; /* Ensure navbar is above content */
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar a {
+  color: var(--text-color-light);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--accent-color);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.content {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+/* about me */
+
+.card-container {
   display: flex;
   flex-direction: column;
+}
+
+h1 {
+  display: flex;
+  font-size: 3rem;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2rem;
+  padding: 20px;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.left {
+  flex-direction: row;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.right {
+  flex-direction: row-reverse;
 }
+
+.card-text {
+  flex: 1;
+  font-size: 2rem;
+}
+
+.card-image {
+  flex-shrink: 1;
+}
+
+.card-image img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/*End About me */
