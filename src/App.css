@@ -5,6 +5,12 @@
   background-image: url("/public/v830-sasi-29.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  --tag-background-color: rgba(107, 126, 222, 0.708);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .scroll-to-top {
@@ -75,6 +81,12 @@ body {
   padding-left: 20px;
 }
 
+a:hover {
+  color: var(--accent-color);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 /* about me */
 
 .card-container {
@@ -122,3 +134,111 @@ h1 {
 }
 
 /*End About me */
+
+/* Projects */
+
+#projects {
+  display: flex;
+  flex-direction: row;
+  height: 30rem;
+}
+
+.card-project {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 20px;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.card-project-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--tag-background-color);
+  color: var(--text-color-light);
+  padding: 0.3rem 0.4rem;
+  border-radius: 4rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+/* End Projects */
+
+/* Contact */
+#contact-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: larger;
+}
+
+.contact-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}

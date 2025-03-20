@@ -1,35 +1,36 @@
 import React from "react";
-import { motion } from "framer-motion";
+
+import ContactItem from "./ContactItem";
 
 const ContactMe = () => {
   return (
     <section id="contact-me">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, feel free to reach out!</p>
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, feel free to reach out!</p>
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, feel free to reach out!</p>
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, feel free to reach out!</p>
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, feel free to reach out!</p>
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, feel free to reach out!</p>
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, feel free to reach out!</p>
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, feel free to reach out!</p>
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, feel free to reach out!</p>
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, feel free to reach out!</p>
-      </motion.div>
+      <h2>Contact informations</h2>
+      <div className="contact-items">
+        <ContactItem
+          name="Phone"
+          value={{ isLink: false, value: "+32472535754" }}
+          icon="/icons/phone.svg"
+        />
+        <ContactItem
+          name="Email"
+          value={{ isLink: false, value: "roti_adi@yahoo.com" }}
+          icon="/icons/email.svg"
+        />
+        <ContactItem
+          name="Linkedin"
+          value={{
+            isLink: true,
+            value: "https://www.linkedin.com/in/adrian-ionut-rotaru/",
+          }}
+          icon="/icons/linkedin.svg"
+        />
+        <ContactItem
+          name="Github"
+          value={{ isLink: true, value: "https://github.com/rotiadi" }}
+          icon="/icons/github.svg"
+        />
+      </div>
     </section>
   );
 };
