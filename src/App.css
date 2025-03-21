@@ -4,7 +4,7 @@
   --accent-color: #e07f7c;
   background-image: url("/public/v830-sasi-29.jpg");
   background-repeat: no-repeat;
-  background-size: inherit;
+  background-size: cover;
   --tag-background-color: rgba(107, 126, 222, 0.708);
 }
 
@@ -347,5 +347,9 @@ h1 {
 
   .card-project {
     height: 250px;
+  }
+
+  .card-project-container {
+    align-items: center;
   }
 }

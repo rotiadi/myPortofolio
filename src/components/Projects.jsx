@@ -50,6 +50,14 @@ const Projects = () => {
             ]}
             tags={["Node.js", "Express", "MongoDB"]}
           />
+          <CardProject
+            title="Portofolio"
+            image="/portofolio.jpeg"
+            description="My first portofolio"
+            appLink="https://portofolio-rotaru-adrian.netlify.app/"
+            gitLink={["https://github.com/rotiadi/portofolio"]}
+            tags={["React", "JavaScript", "CSS", "Sass"]}
+          />
         </motion.div>
       </div>
     </>
