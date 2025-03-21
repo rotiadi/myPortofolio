@@ -9,7 +9,7 @@ const ContactItem = ({ icon, name, value }) => {
       </div>
       <div className="contact-item-value">
         {value.isLink ? (
-          <a href={value.value} target="_blank">
+          <a href={value.value} target="_blank" ref="noreferrer">
             {value.value}
           </a>
         ) : (
